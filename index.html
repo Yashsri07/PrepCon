@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Flow - Aptitude Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body><main class="app-shell">
+  <header class="hero"><div><p class="eyebrow">PERSONAL STUDY PLANNER</p><h1>Focus <em>Flow</em></h1><p class="subtitle">A gentle system for showing up, one checkmark at a time.</p></div><div class="hero-actions"><div class="profile-switcher" id="profileSwitcher"><button class="profile-avatar me-avatar" data-profile="me" title="My tracker">M</button><button class="profile-avatar friend-avatar" data-profile="friend" title="Friend's tracker">F</button></div><div class="hero-date" id="todayLabel"></div></div></header>
+  <section class="comparison-card"><div><p class="eyebrow">STUDY BUDDIES</p><h2><span id="activeProfileName">My</span> tracker</h2><p id="syncStatus">Private mode · saved on this device</p></div><div class="comparison-people"><div class="person-score"><span class="profile-avatar me-avatar">M</span><span>Me</span><strong id="meScore">0%</strong></div><div class="versus">vs</div><div class="person-score"><span class="profile-avatar friend-avatar">F</span><span>Friend</span><strong id="friendScore">0%</strong></div></div></section>
+  <section class="quote-card"><span class="sun">&#10022;</span><p>"Small daily steps turn into remarkable distance."</p><span>YOUR CONSISTENCY COUNTS</span></section>
+  <section class="tracker-section">
+    <div class="section-heading"><div><p class="eyebrow">MONTHLY RHYTHM</p><h2>Daily task tracker</h2></div><div class="month-controls"><button class="icon-button" id="prevMonth" aria-label="Previous month">&#8592;</button><button class="month-picker" id="monthButton"></button><input id="monthInput" type="month"><button class="icon-button" id="nextMonth" aria-label="Next month">&#8594;</button></div></div>
+    <div class="task-entry"><input id="newTask" maxlength="70" placeholder="Add a personal task..." aria-label="New task"><button id="addTask">Add task <span>+</span></button></div>
+    <div class="tracker-scroll"><div id="calendarTracker" class="calendar-tracker"></div></div><p class="hint">Tap a square when you complete a task. Your progress is saved automatically on this device.</p>
+  </section>
+  <section class="syllabus-section"><div class="section-heading syllabus-title"><div><p class="eyebrow">LEARNING ROADMAP</p><h2>Aptitude topic list</h2></div><span class="overall-progress" id="overallProgress">0% complete</span></div><p class="section-note">Tick a topic when you feel confident with it.</p><div id="topicLists" class="topic-grid"></div></section>
+  <section class="dsa-section"><div class="section-heading"><div><p class="eyebrow">YOUR CODING ROADMAP</p><h2>DSA topics</h2></div><button class="add-dsa-button" id="openDsaInput" aria-label="Add DSA topic">+</button></div><div class="dsa-entry" id="dsaEntry"><input id="newDsaTopic" maxlength="50" placeholder="e.g. Binary Search"><button id="addDsaTopic">Add topic</button></div><div class="dsa-capsules" id="dsaCapsules"></div><p class="hint">Click a capsule to mark it complete. Use the × to remove it.</p></section>
+</main><template id="topicTemplate"><article class="topic-card"><div class="topic-card-head"><span class="topic-number"></span><h3></h3><span class="topic-count"></span></div><div class="topics"></div></article></template><script src="supabase-config.js"></script><script src="app.js"></script></body>
+</html>

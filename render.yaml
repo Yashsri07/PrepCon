@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: focus-flow-aptitude-tracker
+    runtime: static
+    staticPublishPath: .
+    buildCommand: ""
