@@ -8,5 +8,5 @@
 window.FOCUS_FLOW_SUPABASE = {
   url: 'https://krfdaiuopdaxomuaslga.supabase.co',
   anonKey: 'sb_publishable_IZo_CkIkkDLDd024H3_nZA_Qh38li8_',
-  pairCode: 'Y&K'
+  pairCode: 'yk'
 };
